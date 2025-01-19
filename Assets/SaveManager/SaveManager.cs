@@ -3,13 +3,16 @@ using UnityEngine;
 
 public static class SaveManager
 {
-	private static readonly string settingsFilePath = Path.Combine(Application.persistentDataPath, "SaveFile.json");
+	private const string SAVEFOLDER_NAME = "/Saves/";
+
+	//C:\Users\[Username]\AppData\LocalLow\[CompanyName]\[ProductName] solo Windows.
+	private static readonly string settingsFilePath = Path.Combine(Application.persistentDataPath + SAVEFOLDER_NAME, "SaveFile.json");
 
 	public static void SaveSettings(GameSettings gameSettings)
 	{
 		try
 		{
-			string settingsJson = JsonUtility.ToJson(gameSettings, true); // Pretty print for readability
+			string settingsJson = JsonUtility.ToJson(gameSettings, true);
 			File.WriteAllText(settingsFilePath, settingsJson);
 			Debug.Log($"Settings saved to: {settingsFilePath}");
 		}
@@ -30,7 +33,7 @@ public static class SaveManager
 			}
 			else
 			{
-				Debug.LogWarning("Settings file not found. Returning default settings.");
+				Debug.LogWarning("<color=orange>Settings file not found. Returning default settings</color>");
 				return null;
 			}
 		}
@@ -50,7 +53,7 @@ public static class SaveManager
 		}
 		else
 		{
-			Debug.LogWarning("No settings file found to delete.");
+			Debug.LogWarning("<color=orange>No settings file found to delete</color>");
 		}
 	}
 }

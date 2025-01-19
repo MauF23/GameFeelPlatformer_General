@@ -47,6 +47,10 @@ public class SettingsMenu : MonoBehaviour
         SaveManager.SaveSettings(gameSettings);
 	}
 
+    public void QuitGame()
+    {
+        Application.Quit(); 
+    }
     private void ReflectSettings()
     {
         volumeSlider.value = gameSettings.volume;
