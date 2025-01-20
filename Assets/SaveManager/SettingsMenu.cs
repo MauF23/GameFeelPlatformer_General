@@ -13,27 +13,16 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-		gameSettings = SaveManager.LoadSettings();
-
-        if(gameSettings == null)
-        {
-            gameSettings = new GameSettings(1, "Player", true);
-        }
-
-        ReflectSettings();
-
 	}
 
     public void SetVolume(float volume)
     {
         gameSettings.volume = volume;
-        SaveSettings();
 	}
 
 	public void SetVFX(bool sfxToggle)
     {
         gameSettings.vfxToggle = sfxToggle;
-        SaveSettings();
 
 	}
 
@@ -42,20 +31,32 @@ public class SettingsMenu : MonoBehaviour
         gameSettings.playerName = name;
     }
 
-    public void SaveSettings()
-    {
-        SaveManager.SaveSettings(gameSettings);
-	}
-
     public void QuitGame()
     {
         Application.Quit(); 
     }
-    private void ReflectSettings()
-    {
-        volumeSlider.value = gameSettings.volume;
-		vfxToggle.isOn = gameSettings.vfxToggle;
-		inputFieldPlayerName.text = gameSettings.playerName;
-	}
+
+	/*
+	JSON snippet
+
+    //Save
+    try
+		{
+			ScoreContainer scoreContainer = new ScoreContainer(scoreList);
+			string json = JsonUtility.ToJson(scoreContainer);
+			PlayerPrefs.SetString($"{scoreKey}", json);
+			PlayerPrefs.Save();
+			Debug.Log($"<color=cyan>SaveScore</color>");
+		}
+		catch (System.Exception e)
+		{
+			Debug.LogError($"<color=red>Error saving score: {e.Message}</color>");
+		}
+
+    Load
+    //	return JsonUtility.FromJson<ScoreContainer>(scorePath).scoreList;
+    */
+
+
 
 }
