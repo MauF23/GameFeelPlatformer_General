@@ -6,7 +6,9 @@ using DG.Tweening;
 public class AnimationManager : MonoBehaviour
 {
     public Animator animator;
+    public PlayerController3D playerController;
     public Sword sword;
+
 
     private const string MOVEMENT_SPEED = "MovementSpeed";
     private const string ATTACK = "Attack";
@@ -43,5 +45,23 @@ public class AnimationManager : MonoBehaviour
 	{
 		sword?.DisableHitbox();
 	}
+
+    public void BlockAttack(int hitboxActive)
+    {
+        int pseudoBool = Mathf.Clamp(hitboxActive, 0, 1);
+
+        bool blockAttack = false;
+
+        if(pseudoBool >= 1)
+        {
+            blockAttack = true;
+        }
+        else
+        {
+            blockAttack = false;
+        }
+
+        playerController.ToggleAttack(blockAttack);
+    }
 	#endregion
 }

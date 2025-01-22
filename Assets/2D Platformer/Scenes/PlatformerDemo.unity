@@ -1141,8 +1141,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 939580454}
   - {fileID: 792657725}
+  - {fileID: 939580454}
   - {fileID: 1319235148}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1158,7 +1158,7 @@ GameObject:
   - component: {fileID: 792657725}
   - component: {fileID: 792657724}
   m_Layer: 0
-  m_Name: VC_PanoramicCam
+  m_Name: VC_PanoramicCam_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20023,7 +20023,7 @@ GameObject:
   - component: {fileID: 939580454}
   - component: {fileID: 939580453}
   m_Layer: 0
-  m_Name: VC_PlayerFollowCam
+  m_Name: VC_PlayerFollowCam_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20682,7 +20682,7 @@ GameObject:
   - component: {fileID: 1319235148}
   - component: {fileID: 1319235147}
   m_Layer: 0
-  m_Name: VC_HighlightLevelPortionCam
+  m_Name: VC_HighlightLevelPortionCam_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21024,7 +21024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1639272563
 Transform:
   m_ObjectHideFlags: 0
@@ -22133,6 +22133,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5439596532191873267, guid: 41c2e8faf31f0e142b19c01fcb481719, type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439596532191873267, guid: 41c2e8faf31f0e142b19c01fcb481719, type: 3}
+      propertyPath: near clip plane
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439596532191873267, guid: 41c2e8faf31f0e142b19c01fcb481719, type: 3}
       propertyPath: orthographic size
       value: 5.51
       objectReference: {fileID: 0}
@@ -22171,7 +22179,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 5
+    m_Style: 1
     m_Time: 0.25
     m_CustomCurve:
       serializedVersion: 2
@@ -22179,7 +22187,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 11400000, guid: 95293fe1759c918419a74e6a30b36367, type: 2}
+  m_CustomBlends: {fileID: 11400000, guid: 71677ba208f5c134d8509711e96f5195, type: 2}
   m_CameraCutEvent:
     m_PersistentCalls:
       m_Calls: []

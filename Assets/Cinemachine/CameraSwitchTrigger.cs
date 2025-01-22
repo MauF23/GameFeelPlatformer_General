@@ -20,7 +20,7 @@ public class CameraSwitchTrigger : MonoBehaviour
     /// <param name="collision"></param>
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        CharacterController player = collision.GetComponent<CharacterController>();
+        PlayerController player = collision.GetComponent<PlayerController>();
         if (player != null)
         {
             CameraManager.instance.CameraSwitch(cameraToSwitch);

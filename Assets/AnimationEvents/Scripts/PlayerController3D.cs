@@ -16,6 +16,7 @@ public class PlayerController3D : MonoBehaviour
 	public Rigidbody rigidbody;
     public Camera playerCamera;
     public AnimationManager animationManager;
+    public bool canAttack = true;
 
     void Start()
     {
@@ -60,10 +61,15 @@ public class PlayerController3D : MonoBehaviour
 
     void Attack()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canAttack)
         {
             animationManager?.SetAttack();
         }
+    }
+
+    public void ToggleAttack(bool attackValue)
+    {
+        canAttack = attackValue;
     }
 
     bool Grounded()
