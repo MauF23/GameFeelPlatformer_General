@@ -46,6 +46,16 @@ public class AnimationManager : MonoBehaviour
 		sword?.DisableHitbox();
 	}
 
+    public void AnimEventEnableAttack()
+    {
+        playerController.ToggleAttack(true);
+    }
+
+    public void AnimEventDisableAttack()
+    {
+        playerController.ToggleAttack(false);
+    }
+
     public void BlockAttack(int hitboxActive)
     {
         int pseudoBool = Mathf.Clamp(hitboxActive, 0, 1);
@@ -64,4 +74,9 @@ public class AnimationManager : MonoBehaviour
         playerController.ToggleAttack(blockAttack);
     }
 	#endregion
+
+    public void DebugFromAnimatorManager()
+    {
+        Debug.Log("AnimatorManagerSaysHello");
+    }
 }
