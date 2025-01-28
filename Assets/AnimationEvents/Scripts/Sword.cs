@@ -18,13 +18,13 @@ public class Sword : MonoBehaviour
 
 	public void EnableHitbox()
     {
-		characterController.ToggleMovement(false);
+		characterController?.ToggleMovement(false);
 		hitbox.enabled = true;
 	}
 
     public void DisableHitbox()
     {
-		characterController.ToggleMovement(true);
+		characterController?.ToggleMovement(true);
 		hitbox.enabled = false;
 	}
 
