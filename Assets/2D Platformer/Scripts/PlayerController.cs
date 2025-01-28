@@ -15,11 +15,14 @@ namespace Platformer
 
         [HideInInspector]
         public bool deathState = false;
+        public bool canMove = true;
 
         private bool isGrounded;
 		public LayerMask ground;
 		public Transform groundCheck;
         public float groundRayLenght;
+
+        public AudioSource jumpAudio, coinAudio;
 
         private Rigidbody2D rigidbody;
         private Animator animator;
@@ -33,7 +36,8 @@ namespace Platformer
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        }
+			canMove = true;
+		}
 
         private void FixedUpdate()
         {
@@ -42,6 +46,11 @@ namespace Platformer
 
         void Update()
         {
+            if (!canMove)
+            {
+                return;
+            }
+
             if (Input.GetButton("Horizontal")) 
             {
                 moveInput = Input.GetAxis("Horizontal");
@@ -55,6 +64,7 @@ namespace Platformer
             }
             if(Input.GetKeyDown(KeyCode.Space) && jumpCounter < JUMP_COUNT)
             {
+                jumpAudio?.Play();
                 rigidbody.velocity = Vector2.zero;
                 rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                 jumpCounter++;
@@ -98,6 +108,7 @@ namespace Platformer
         {
             if (other.gameObject.tag == "Coin")
             {
+                coinAudio?.Play();
                 gameManager.CollectCoin();
                 Destroy(other.gameObject);
             }
