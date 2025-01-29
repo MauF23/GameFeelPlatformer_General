@@ -7,9 +7,10 @@ public class PlayerController3D : MonoBehaviour
 	private Vector3 movementVector;
     private Vector3 relativeToCameraDirection, relativeMovementVector;
     public float movementSpeed, rotationSpeed;
-    private bool canMove;
+	public bool canMove = true;
 
-    private const float GROUND_SPHERE_RADIUS = 2;
+    private const float GROUND_SPHERE_RADIUS = 0.5f;
+    private const float GRAVITY = -20;
 
 	public LayerMask groundLayer;
     public Transform groundPoint;
@@ -17,6 +18,7 @@ public class PlayerController3D : MonoBehaviour
     public Camera playerCamera;
     public AnimationManager animationManager;
     public bool canAttack = true;
+    private bool grounded;
 
     void Start()
     {
@@ -25,7 +27,9 @@ public class PlayerController3D : MonoBehaviour
 
 	private void Update()
 	{
-        if (Grounded())
+        grounded = Grounded();
+
+		if (grounded)
         {
 			movementVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			Attack();
@@ -34,8 +38,15 @@ public class PlayerController3D : MonoBehaviour
 
 	void FixedUpdate()
     {
-		if (Grounded() && canMove)
+		if (grounded)
         {
+			Debug.Log("Grounded");
+
+			if (!canMove)
+            {
+                return;
+            }
+
 			rigidbody.velocity = Movement();
 
 			if (Movement() != Vector3.zero)
@@ -43,6 +54,11 @@ public class PlayerController3D : MonoBehaviour
                 Rotation();
             }
             animationManager?.SetAnimMovement(Movement().sqrMagnitude);
+		}
+        else
+        {
+            Debug.Log("NotGrounded");
+			rigidbody.velocity += new Vector3(0, GRAVITY, 0);
 		}
     }
 
@@ -74,7 +90,14 @@ public class PlayerController3D : MonoBehaviour
 
     bool Grounded()
     {
-		return Physics.OverlapSphere(groundPoint.transform.position, 2, groundLayer).Length > 0;    
+        Collider[] colliders = Physics.OverlapSphere(groundPoint.transform.position, GROUND_SPHERE_RADIUS, groundLayer);
+
+        for(int i = 0; i < colliders.Length; i++)
+        {
+            Debug.Log("<color=green> layerGrounded: " + colliders[i].gameObject.name + "</color>");
+        }
+
+        return (colliders.Length > 0) ;
     }
 
     Vector3 RelativeCameraDirection(Vector3 referenceVector)
@@ -92,5 +115,11 @@ public class PlayerController3D : MonoBehaviour
         }
         this.canMove = canMove;
     }
+
+	private void OnDrawGizmos()
+	{
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(groundPoint.transform.position, GROUND_SPHERE_RADIUS);
+	}
 
 }

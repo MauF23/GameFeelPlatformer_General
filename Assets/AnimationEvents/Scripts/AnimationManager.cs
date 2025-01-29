@@ -10,10 +10,10 @@ public class AnimationManager : MonoBehaviour
     public Sword sword;
 
 
-    private const string MOVEMENT_SPEED = "MovementSpeed";
-    private const string ATTACK = "Attack";
-    private const string HIT = "Hit";
-    private const string DEATH = "Death";
+    protected const string MOVEMENT_SPEED = "MovementSpeed";
+	protected const string ATTACK = "Attack";
+	protected const string HIT = "Hit";
+	protected const string DEATH = "Death";
 
     public void SetAnimMovement(float movementSpeed)
     {
