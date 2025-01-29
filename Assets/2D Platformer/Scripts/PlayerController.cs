@@ -65,7 +65,7 @@ namespace Platformer
             if(Input.GetKeyDown(KeyCode.Space) && jumpCounter < JUMP_COUNT)
             {
                 jumpAudio?.Play();
-                rigidbody.velocity = Vector2.zero;
+								rigidbody.velocity = Vector2.zero;
                 rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                 jumpCounter++;
 			}
