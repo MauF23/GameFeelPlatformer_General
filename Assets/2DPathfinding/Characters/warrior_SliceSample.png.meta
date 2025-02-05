@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c153abc56412af14d994998e9ee4e6a0
+guid: 931ee743913bb7140be8d6e70729ab1b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,37 +106,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ninja_f_Up1
+      name: warrior_SliceSample_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,20 +118,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae3ddc410956b634f9482be5fb8460fa
-      internalID: -119248018
+      spriteID: 135b636733f4ebc449c5078ac9e5c40d
+      internalID: 409026278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Up2
+      name: warrior_SliceSample_1
       rect:
         serializedVersion: 2
         x: 32
@@ -165,20 +139,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb3e639aa15d7e84d9a6ac15d462edea
-      internalID: -5959408
+      spriteID: 4c162b4151fc22f4a91097a186674571
+      internalID: -369568541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Up3
+      name: warrior_SliceSample_2
       rect:
         serializedVersion: 2
         x: 64
@@ -186,20 +160,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 146c35692c9ac674bb58d9c023921cb6
-      internalID: 1327349418
+      spriteID: b3bcdedb5062d604483c70322e1ad5eb
+      internalID: -1081127460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Right1
+      name: warrior_SliceSample_3
       rect:
         serializedVersion: 2
         x: 0
@@ -207,41 +181,41 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23f7494f31a5b3344bf8cbc83f8f8c4d
-      internalID: -1000497842
+      spriteID: 1dc5e95be66dd7b4e8fde4d9ec69f520
+      internalID: -160377525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Right2
+      name: warrior_SliceSample_4
       rect:
         serializedVersion: 2
-        x: 34
-        y: 74
-        width: 22
-        height: 34
+        x: 32
+        y: 72
+        width: 32
+        height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb88e2efc36431b43a57cc04c21ff469
-      internalID: -1687533807
+      spriteID: c9585fc60abe2814a97f190118138b46
+      internalID: 1663804431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Right3
+      name: warrior_SliceSample_5
       rect:
         serializedVersion: 2
         x: 64
@@ -249,20 +223,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d5bb39fc818d864eb2a6f8b6b2dda62
-      internalID: 331892018
+      spriteID: cf83384ec52fab94b8b720926e281147
+      internalID: -159174279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Down1
+      name: warrior_SliceSample_6
       rect:
         serializedVersion: 2
         x: 0
@@ -270,20 +244,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f4a38f6f66d1364491dfa82a9d5cbd2
-      internalID: -717793745
+      spriteID: 0141907c79c195d4ca0ccd76afe1a028
+      internalID: 397799217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Down2
+      name: warrior_SliceSample_7
       rect:
         serializedVersion: 2
         x: 32
@@ -291,20 +265,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74430480fcac11143b3207aeca72a502
-      internalID: 534779943
+      spriteID: 154636e2eac1ebd4e890d2187d9bc548
+      internalID: -340192366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Down3
+      name: warrior_SliceSample_8
       rect:
         serializedVersion: 2
         x: 64
@@ -312,20 +286,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a47f57b1d7670fe42b0d17852ba96f8e
-      internalID: -585590337
+      spriteID: ec5d65ec1eb95fb4c8519fab82fcbe84
+      internalID: 956903891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Left1
+      name: warrior_SliceSample_9
       rect:
         serializedVersion: 2
         x: 0
@@ -333,20 +307,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc9f609c33fbc34f864e2aea28d415f
-      internalID: 1576421858
+      spriteID: 40315337e9ca2434f9164a89b97ed378
+      internalID: -212748286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Left2
+      name: warrior_SliceSample_10
       rect:
         serializedVersion: 2
         x: 32
@@ -354,20 +328,20 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8345ec7946346a747ab20381de50a5ed
-      internalID: 1864133698
+      spriteID: d48e480b6ed17b34fa41d64b1ec64303
+      internalID: -587947363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_f_Left3
+      name: warrior_SliceSample_11
       rect:
         serializedVersion: 2
         x: 64
@@ -375,14 +349,14 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138574d5ae368904f8e1b43c938fd639
-      internalID: 854690029
+      spriteID: b747fcf23afacd24aa9da489cb265bee
+      internalID: -1599750478
       vertices: []
       indices: 
       edges: []
@@ -398,18 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ninja_f_Down1: -717793745
-      ninja_f_Down2: 534779943
-      ninja_f_Down3: -585590337
-      ninja_f_Left1: 1576421858
-      ninja_f_Left2: 1864133698
-      ninja_f_Left3: 854690029
-      ninja_f_Right1: -1000497842
-      ninja_f_Right2: -1687533807
-      ninja_f_Right3: 331892018
-      ninja_f_Up1: -1935705441
-      ninja_f_Up2: -308496462
-      ninja_f_Up3: 1327349418
+      warrior_SliceSample_0: 409026278
+      warrior_SliceSample_1: -369568541
+      warrior_SliceSample_10: -587947363
+      warrior_SliceSample_11: -1599750478
+      warrior_SliceSample_2: -1081127460
+      warrior_SliceSample_3: -160377525
+      warrior_SliceSample_4: 1663804431
+      warrior_SliceSample_5: -159174279
+      warrior_SliceSample_6: 397799217
+      warrior_SliceSample_7: -340192366
+      warrior_SliceSample_8: 956903891
+      warrior_SliceSample_9: -212748286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

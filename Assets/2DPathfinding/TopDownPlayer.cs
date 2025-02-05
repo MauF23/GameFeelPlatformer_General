@@ -14,9 +14,9 @@ public class TopDownPlayer : MonoBehaviour
 
     private const string xAxis = "Horizontal";
     private const string yAxis = "Vertical";
-	private const string ANIM_MOVE_SPEED = "moveSpeed";
-	private const string ANIM_MOVE_DIRECTIONX = "moveDirectionX";
-	private const string ANIM_MOVE_DIRECTIONY = "moveDirectionY";
+	private const string ANIM_MOVE_SPEED = "MoveSpeed";
+	private const string ANIM_MOVE_DIRECTIONX = "MoveX";
+	private const string ANIM_MOVE_DIRECTIONY = "MoveY";
 
 
 	void Start()
