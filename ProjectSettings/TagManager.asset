@@ -16,8 +16,8 @@ TagManager:
   - Player
   - PlayerBlocker
   - Wall
-  - 
-  - 
+  - Enemy
+  - Coin
   - 
   - 
   - 
