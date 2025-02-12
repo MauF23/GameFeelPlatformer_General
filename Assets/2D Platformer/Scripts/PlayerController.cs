@@ -22,7 +22,7 @@ namespace Platformer
 		public Transform groundCheck;
         public float groundRayLenght;
 
-        public AudioSource jumpAudio, coinAudio;
+    public AudioManager playerAudioManager;
 
         private Rigidbody2D rigidbody;
         private Animator animator;
@@ -36,7 +36,8 @@ namespace Platformer
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-			canMove = true;
+			      canMove = true;
+      playerAudioManager.FadePlayAudio("Music", 2);
 		}
 
         private void FixedUpdate()
@@ -64,7 +65,7 @@ namespace Platformer
             }
             if(Input.GetKeyDown(KeyCode.Space) && jumpCounter < JUMP_COUNT)
             {
-                jumpAudio?.Play();
+                playerAudioManager.PlayAudio("Jump");
 								rigidbody.velocity = Vector2.zero;
                 rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                 jumpCounter++;
@@ -108,8 +109,8 @@ namespace Platformer
         {
             if (other.gameObject.tag == "Coin")
             {
-                coinAudio?.Play();
-                gameManager.CollectCoin();
+				        playerAudioManager.PlayAudio("Coin");
+				        gameManager.CollectCoin();
                 Destroy(other.gameObject);
             }
         }

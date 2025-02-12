@@ -24,8 +24,8 @@ namespace Platformer
         void Start()
         {
             player = GameObject.Find("Player").GetComponent<PlayerController>();
-            musicAudioSource.volume = 0;
-						musicAudioSource.DOFade(0.5f, musicFadeInTime);
+      //      musicAudioSource.volume = 0;
+						//musicAudioSource.DOFade(0.5f, musicFadeInTime);
 				}
 
         public void GameOver()
